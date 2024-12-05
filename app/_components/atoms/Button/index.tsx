@@ -9,9 +9,9 @@ const style = {
 		danger: "bg-danger text-white",
 	},
 	size: {
-		sm: "text-sm px-2 py-1",
+		sm: "text-md px-2 py-1",
 		md: "text-md px-3 py-2",
-		lg: "text-lg px-4 py-3",
+		lg: "text-md px-4 py-3",
 	},
 };
 
@@ -20,7 +20,7 @@ export type IProps = {
 	size?: keyof typeof style.size;
 };
 
-type TProps<T = unknown> = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement> & IProps & T>;
+type TProps = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement> & IProps>;
 
 const Default = forwardRef<HTMLButtonElement, TProps>(
 	({ className, size = "md", variant = "default", ...rest }, ref) => {
