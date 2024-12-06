@@ -41,7 +41,7 @@ const Default = forwardRef<HTMLButtonElement, TProps>(
 
 const Text = forwardRef<HTMLButtonElement, TProps>(({ className, children, ...rest }, ref) => {
 	return (
-		<Default ref={ref} className={twMerge(className, "bg-white p-0 text-black")} {...rest}>
+		<Default ref={ref} className={twMerge(className, "bg-transparent p-0 text-black")} {...rest}>
 			{children}
 		</Default>
 	);
