@@ -1,10 +1,10 @@
-import type tailwindConfig from "@/tailwind.config";
-import React, { forwardRef, type HTMLAttributes, JSX, type PropsWithChildren } from "react";
+import type { TColors } from "@/app/_types/tw";
+import React, { forwardRef, type HTMLAttributes, type PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
 export type IProps = {
-	textColor: `text-${keyof typeof tailwindConfig.theme.extend.colors}`;
-	bgColor: `bg-${keyof typeof tailwindConfig.theme.extend.colors}`;
+	textColor: `text-${TColors}`;
+	bgColor: `bg-${TColors}`;
 };
 
 type TProps = PropsWithChildren<HTMLAttributes<HTMLSpanElement> & IProps>;
