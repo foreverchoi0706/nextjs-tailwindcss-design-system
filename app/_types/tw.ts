@@ -1,3 +1,7 @@
 import type { Colors } from "@/app/_constants/tw";
 
-export type TColors = keyof typeof Colors;
+type TColors = keyof typeof Colors;
+
+export type TBgColor = `bg-${TColors}`;
+
+export type TTextColor = `text-${TColors}`;

@@ -1,10 +1,10 @@
-import type { TColors } from "@/app/_types/tw";
+import type { TBgColor, TTextColor } from "@/app/_types/tw";
 import React, { forwardRef, type HTMLAttributes, type PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
 export type IProps = {
-	textColor: `text-${TColors}`;
-	bgColor: `bg-${TColors}`;
+	bgColor: TBgColor;
+	textColor: TTextColor;
 };
 
 type TProps = PropsWithChildren<HTMLAttributes<HTMLSpanElement> & IProps>;
