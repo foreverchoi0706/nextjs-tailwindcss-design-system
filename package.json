@@ -9,7 +9,9 @@
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"ncu": "npx npm-check-updates -u & npm install"
+		"ncu": "npx npm-check-updates -u & npm install",
+		"start:a": "npm run start -w project-a",
+		"start:b": "npm run start -w project-b"
 	},
 	"dependencies": {
 		"next": "15.1.0",
@@ -36,5 +38,6 @@
 		"storybook": "^8.4.7",
 		"tailwindcss": "^3.4.16",
 		"typescript": "^5"
-	}
+	},
+	"workspaces": ["packages/*"]
 }
