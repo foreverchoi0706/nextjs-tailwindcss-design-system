@@ -1,20 +1,13 @@
-import {
-	type ElementType,
-	type HTMLAttributes,
-	type PropsWithChildren,
-	createElement,
-	forwardRef,
-} from "react";
+import { createElement, forwardRef } from "react";
+import type { Typography } from "./index.d";
 
-type TPropsWithAsChildren<T extends HTMLAttributes<HTMLElement> = HTMLAttributes<HTMLElement>> = {
-	as?: ElementType;
-} & PropsWithChildren<T>;
-
-const Default = forwardRef<HTMLElement, TPropsWithAsChildren>(({ as = "div", ...rest }, ref) => {
-	return createElement(as, {
-		ref,
-		...rest,
-	});
-});
+const Default = forwardRef<HTMLElement, Typography.Props>(
+  ({ as = "div", ...rest }, ref) => {
+    return createElement(as, {
+      ref,
+      ...rest,
+    });
+  }
+);
 
 export default Default;

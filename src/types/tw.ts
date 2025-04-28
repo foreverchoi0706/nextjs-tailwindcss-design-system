@@ -1,6 +1,6 @@
 import type { Colors } from "@/constants/tw";
 
-type TColors = keyof typeof Colors extends string ? keyof typeof Colors : never;
+type TColors = keyof typeof Colors;
 
 export type TBgColor = `bg-${TColors}`;
 

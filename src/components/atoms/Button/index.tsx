@@ -1,16 +1,13 @@
-import {
-  type ButtonHTMLAttributes,
-  forwardRef,
-  type PropsWithChildren,
-} from "react";
+import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
+import type { Button } from "./index.d";
 
 const DEFAULT_STYLE =
   "rounded border-0 hover:brightness-90 active:brightness-90" as const;
 
-const VARIANT = {
+export const VARIANT = {
   variant: {
-    default: "bg-gray_light_2 text-black",
+    default: "bg-white border border-gray-300 text-black",
     primary: "bg-primary text-white",
     secondary: "bg-secondary text-black",
     danger: "bg-danger text-white",
@@ -22,16 +19,7 @@ const VARIANT = {
   },
 } as const;
 
-export type IProps = {
-  variant?: keyof typeof VARIANT.variant;
-  size?: keyof typeof VARIANT.size;
-};
-
-type TProps = PropsWithChildren<
-  ButtonHTMLAttributes<HTMLButtonElement> & IProps
->;
-
-const Default = forwardRef<HTMLButtonElement, TProps>(
+const Default = forwardRef<HTMLButtonElement, Button.Props>(
   ({ className, size = "md", variant = "default", ...rest }, ref) => {
     return (
       <button
@@ -48,7 +36,7 @@ const Default = forwardRef<HTMLButtonElement, TProps>(
   }
 );
 
-const Text = forwardRef<HTMLButtonElement, TProps>(
+const Text = forwardRef<HTMLButtonElement, Button.Props>(
   ({ className, children, ...rest }, ref) => {
     return (
       <Default

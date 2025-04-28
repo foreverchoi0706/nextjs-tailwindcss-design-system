@@ -1,10 +1,10 @@
 import Typography from "@/components/atoms/Typography";
-import { DropdownProps, DropdownItemProps, DropdownContext } from "./index.d";
+import type { Dropdown } from "./index.d";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
-const Context = createContext({} as DropdownContext);
+const Context = createContext({} as Dropdown.Context);
 
-function Default({ children, onItemClick, value }: DropdownProps) {
+function Default({ children, onItemClick, value }: Dropdown.Props) {
   const refDropdown = useRef<HTMLDivElement>(null);
   const [isShowList, setIsShowList] = useState<boolean>(false);
 
@@ -26,13 +26,13 @@ function Default({ children, onItemClick, value }: DropdownProps) {
     return () => {
       abortController.abort();
     };
-  }, [isShowList]);
+  }, []);
 
   return (
     <Context.Provider value={{ onItemClick, setIsShowList, value }}>
       <div
         ref={refDropdown}
-        className="cursor-pointer relative  border inline-block"
+        className="relative inline-block cursor-pointer border"
       >
         <Typography
           className="p-4 "
@@ -43,7 +43,7 @@ function Default({ children, onItemClick, value }: DropdownProps) {
         <ul
           className={`${
             isShowList ? "block" : "hidden"
-          } absolute z-10 top-[100%] mt-2 border left-0`}
+          } absolute top-[100%] left-0 z-10 mt-2 border`}
         >
           {children}
         </ul>
@@ -52,12 +52,12 @@ function Default({ children, onItemClick, value }: DropdownProps) {
   );
 }
 
-function Item({ children, value }: DropdownItemProps) {
+function Item({ children, value }: Dropdown.ItemProps) {
   const { onItemClick, setIsShowList } = useContext(Context);
 
   return (
     <li
-      className="p-4 cursor-pointer"
+      className="cursor-pointer p-4"
       onClick={() => {
         onItemClick(value);
         setIsShowList(false);

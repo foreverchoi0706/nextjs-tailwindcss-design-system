@@ -1,14 +1,11 @@
-import {
-  forwardRef,
-  type InputHTMLAttributes,
-  type PropsWithChildren,
-} from "react";
+import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
+import type { Input } from "./index.d";
 
 const DEFAULT_STYLE =
-  "rounded border-none bg-gray_light_2 text-black_light outline-0" as const;
+  "rounded border border-gray-300 px-4 py-2 outline-0" as const;
 
-const VARIANT = {
+export const VARIANT = {
   size: {
     sm: "text-sm px-3 py-2",
     md: "text-md px-3 py-2",
@@ -16,17 +13,11 @@ const VARIANT = {
   },
 } as const;
 
-export type IProps = {
-  size?: keyof typeof VARIANT.size;
-};
-
-type TProps = PropsWithChildren<InputHTMLAttributes<HTMLInputElement> & IProps>;
-
-const Default = forwardRef<HTMLInputElement, TProps>(
+const Default = forwardRef<HTMLInputElement, Input.Props>(
   ({ className, size, ...rest }, ref) => {
     let style = "";
 
-    if (size !== undefined) style += ` ${VARIANT.size[size]}`;
+    if (size !== undefined) style += `${VARIANT.size[size]}`;
 
     return (
       <input
