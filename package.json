@@ -7,14 +7,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "ncu": "npx npm-check-updates -u & npm install",
-    "start:a": "npm run start -w project-a",
-    "start:b": "npm run start -w project-b",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev:todo": "npm run dev -workspaces todo"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "tailwind-merge": "^2.5.5"
@@ -26,18 +21,17 @@
     "@storybook/addon-interactions": "^8.6.12",
     "@storybook/addon-onboarding": "^8.6.12",
     "@storybook/blocks": "^8.6.12",
-    "@storybook/builder-vite": "^8.6.12",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
     "@storybook/test": "^8.6.12",
+    "@tailwindcss/vite": "^4.1.4",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.4.1",
     "storybook": "^8.6.12",
     "tailwindcss": "^4.1.4",
-    "typescript": "^5",
-    "vite": "^5.1.4"
+    "typescript": "^5"
   },
   "workspaces": [
     "packages/*"
