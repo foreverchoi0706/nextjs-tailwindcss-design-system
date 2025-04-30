@@ -1,4 +1,4 @@
-import Typography from "@/stories/atoms/Typography";
+import Typography from "../../atoms/Typography";
 import type { Dropdown } from "./index.d";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 

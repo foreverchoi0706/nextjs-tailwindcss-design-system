@@ -4,8 +4,8 @@ import { Colors } from "@/app/_constants/tw";
 export default {
   content: [
     "./index.html",
-    "./.storybook/**/*.{js,ts,jsx,tsx}",
-    "./stories/**/*.{js,ts,jsx,tsx}",
+    "./packages/design-system/**/*.{js,ts,jsx,tsx}",
+    "./packages/todo/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {

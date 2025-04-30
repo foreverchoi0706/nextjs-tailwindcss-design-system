@@ -2,19 +2,20 @@ import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 import type { Button } from "./index.d";
 
-const DEFAULT_STYLE = "rounded border-0 hover:brightness-90 active:brightness-90" as const;
+const DEFAULT_STYLE =
+	"rounded border-0 hover:brightness-90 active:brightness-90 disabled:active:brightness-100 disabled:hover:brightness-100 disabled:opacity-70" as const;
 
 export const VARIANT = {
 	variant: {
 		default: "bg-white border border-gray-300 text-black",
-		primary: "bg-primary text-white",
-		secondary: "bg-secondary text-black",
-		danger: "bg-danger text-white",
+		primary: "bg-blue-500 text-white",
+		secondary: "bg-red-500 text-white",
+		danger: "bg-red-500 text-white",
 	},
 	size: {
 		sm: "text-md px-2 py-1",
-		md: "text-md px-3 py-2",
-		lg: "text-md px-4 py-3",
+		md: "text-md px-3 py-3",
+		lg: "text-md px-3 py-4",
 	},
 } as const;
 

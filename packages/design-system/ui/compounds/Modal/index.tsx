@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import Typography from "@/stories/atoms/Typography";
 import type { Modal } from "./index.d";
+import Typography from "@/ui/atoms/Typography";
 
 const Context = createContext({});
 

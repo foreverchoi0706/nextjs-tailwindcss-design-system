@@ -1,0 +1,32 @@
+{
+	"name": "@design-system/ui",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"tailwind-merge": "^3.2.0",
+		"@chromatic-com/storybook": "^3.2.6",
+		"@storybook/addon-essentials": "^8.6.12",
+		"@storybook/addon-interactions": "^8.6.12",
+		"@storybook/addon-onboarding": "^8.6.12",
+		"@storybook/blocks": "^8.6.12",
+		"@storybook/react": "^8.6.12",
+		"@storybook/react-vite": "^8.6.12",
+		"@storybook/test": "^8.6.12",
+		"storybook": "^8.6.12"
+	},
+	"exports": {
+		"./atoms/Button": {
+			"import": "./ui/atoms/Button/index.tsx",
+			"require": "./ui/atoms/Button/index.tsx"
+		},
+		"./atoms/Input": {
+			"import": "./ui/atoms/Input/index.tsx",
+			"require": "./ui/atoms/Input/index.tsx"
+		}
+	}
+}

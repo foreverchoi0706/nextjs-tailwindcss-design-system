@@ -1,39 +1,26 @@
 {
-  "name": "tailwindcss-design-system",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "ncu": "npx npm-check-updates -u & npm install",
-    "dev:todo": "npm run dev --workspace todo"
-  },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "tailwind-merge": "^3.2.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@chromatic-com/storybook": "^3.2.6",
-    "@storybook/addon-essentials": "^8.6.12",
-    "@storybook/addon-interactions": "^8.6.12",
-    "@storybook/addon-onboarding": "^8.6.12",
-    "@storybook/blocks": "^8.6.12",
-    "@storybook/react": "^8.6.12",
-    "@storybook/react-vite": "^8.6.12",
-    "@storybook/test": "^8.6.12",
-    "@tailwindcss/vite": "^4.1.4",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitejs/plugin-react": "^4.4.1",
-    "storybook": "^8.6.12",
-    "tailwindcss": "^4.1.4",
-    "typescript": "^5"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "monorepo",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"ncu": "npx npm-check-updates -u & npm install",
+		"dev:design-system": "npm run storybook --workspaces design-system",
+		"dev:todo": "npm run dev --workspace todo"
+	},
+	"dependencies": {
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@tailwindcss/vite": "^4.1.4",
+		"@types/node": "^22",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@vitejs/plugin-react": "^4.4.1",
+		"tailwindcss": "^4.1.4",
+		"typescript": "^5"
+	},
+	"workspaces": ["packages/*"]
 }

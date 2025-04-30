@@ -1,6 +1,6 @@
-import type { Colors } from "../constants/tw";
+import type { COLORS } from "@/constants/tw";
 
-type TColors = keyof typeof Colors;
+type TColors = keyof typeof COLORS;
 
 export type TBgColor = `bg-${TColors}`;
 
