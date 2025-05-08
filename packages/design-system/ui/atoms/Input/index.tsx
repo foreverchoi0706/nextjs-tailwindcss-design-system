@@ -11,7 +11,7 @@ export const VARIANT = {
 		md: "text-md px-3 py-2",
 		lg: "text-lg px-3 py-3",
 	},
-};
+} as const;
 
 const Default = forwardRef<HTMLInputElement, Input.Props>(
 	({ className, size = "md", ...rest }, ref) => {

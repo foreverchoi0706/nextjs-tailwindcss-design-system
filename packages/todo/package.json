@@ -9,6 +9,6 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@design-system/ui": "*"
+		"@design-system/ui": "0.1.0"
 	}
 }
