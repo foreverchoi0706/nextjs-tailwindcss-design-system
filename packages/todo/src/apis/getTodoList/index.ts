@@ -1,5 +1,5 @@
 import { queryOptions } from "@tanstack/react-query";
-import type { Todo } from "../getTodo/index.d";
+import type { Todo } from "@/apis/getTodo/index.d";
 
 const queryFn = async () => {
 	const response = await fetch("https://jsonplaceholder.typicode.com/todos");

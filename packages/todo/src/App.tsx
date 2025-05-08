@@ -1,7 +1,7 @@
 import { type ChangeEventHandler, useState } from "react";
-import getTodoList from "./apis/getTodoList";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import getTodo from "./apis/getTodo";
+import getTodo from "@/apis/getTodo";
+import getTodoList from "@/apis/getTodoList";
 
 function App() {
 	const queryClient = useQueryClient();
