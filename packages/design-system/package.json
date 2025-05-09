@@ -12,28 +12,6 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
-	"devDependencies": {
-		"@babel/core": "^7.27.1",
-		"@babel/preset-env": "^7.27.2",
-		"@babel/preset-react": "^7.27.1",
-		"@babel/preset-typescript": "^7.27.1",
-		"@rollup/plugin-babel": "^6.0.4",
-		"@rollup/plugin-commonjs": "^28.0.3",
-		"@rollup/plugin-json": "^6.1.0",
-		"@rollup/plugin-node-resolve": "^16.0.1",
-		"@rollup/plugin-terser": "^0.4.4",
-		"@rollup/plugin-typescript": "^12.1.2",
-		"@storybook/addon-essentials": "^8.6.12",
-		"@storybook/addon-interactions": "^8.6.12",
-		"@storybook/addon-onboarding": "^8.6.12",
-		"@storybook/blocks": "^8.6.12",
-		"@storybook/react": "^8.6.12",
-		"@storybook/react-vite": "^8.6.12",
-		"@storybook/test": "^8.6.12",
-		"rollup": "^4.7.0",
-		"rollup-plugin-dts": "^6.1.0",
-		"storybook": "^8.6.12"
-	},
 	"exports": {
 		".": {
 			"import": "./dist/index.esm.js",
