@@ -1,7 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { dts } from "rollup-plugin-dts";
 import babel from "@rollup/plugin-babel";
 
@@ -34,7 +33,6 @@ export default [
 					["@babel/preset-react", { runtime: "automatic" }], // react 17+ 자동 JSX runtime
 				],
 			}),
-			peerDepsExternal(),
 			resolve({
 				extensions: [".js", ".ts", ".jsx", ".tsx"],
 			}),
