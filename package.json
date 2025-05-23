@@ -7,7 +7,7 @@
 		"ncu": "npx npm-check-updates -u & npm install",
 		"dev:design-system": "npm run storybook --workspaces design-system",
 		"dev:todo": "npm run dev --workspace todo",
-		"rollup:design-system": "npm run rollup --workspaces design-system"
+		"build:design-system": "npm run build --workspaces design-system"
 	},
 	"dependencies": {
 		"@tanstack/react-query": "^5.75.4",
@@ -24,12 +24,6 @@
 		"@babel/preset-react": "^7.27.1",
 		"@babel/preset-typescript": "^7.27.1",
 		"@biomejs/biome": "^1.9.4",
-		"@rollup/plugin-babel": "^6.0.4",
-		"@rollup/plugin-commonjs": "^28.0.3",
-		"@rollup/plugin-json": "^6.1.0",
-		"@rollup/plugin-node-resolve": "^16.0.1",
-		"@rollup/plugin-terser": "^0.4.4",
-		"@rollup/plugin-typescript": "^12.1.2",
 		"@storybook/addon-essentials": "^8.6.12",
 		"@storybook/addon-interactions": "^8.6.12",
 		"@storybook/addon-onboarding": "^8.6.12",
@@ -43,12 +37,9 @@
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^4.4.1",
-		"rollup": "^4.7.0",
-		"rollup-plugin-dts": "^6.1.0",
 		"storybook": "^8.6.12",
+		"tsup": "^8.5.0",
 		"typescript": "^5"
 	},
-	"workspaces": [
-		"packages/*"
-	]
+	"workspaces": ["packages/*"]
 }

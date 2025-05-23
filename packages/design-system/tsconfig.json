@@ -1,10 +1,13 @@
 {
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		}
+		"outDir": "dist",
+		"declaration": true,
+		"declarationDir": "dist/types",
+		"emitDeclarationOnly": true,
+		"composite": false,
+		"rootDir": "ui"
 	},
-	"include": ["ui"]
+	"include": ["ui/**/*"],
+	"exclude": ["node_modules", "dist"]
 }

@@ -8,7 +8,7 @@
 	"types": "dist/index.d.ts",
 	"files": ["dist"],
 	"scripts": {
-		"rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",
+		"build": "tsup --config tsup.config.ts",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
